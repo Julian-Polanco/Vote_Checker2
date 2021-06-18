@@ -13,6 +13,7 @@ if(!isset($_SESSION['N_identificacion'])){
        <link rel="icon" href="images/icono6.ico">
        <title>Inicio 3
        </title>
+       <title>Inicio 3</title>
        <link rel="stylesheet" type="text/css" href="css/estiloPrincipal.css"> 
        <link rel="shortcut icon" href="images/escudobarra.png">
        <link rel="preconnect" href="https://fonts.gstatic.com">
