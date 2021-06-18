@@ -11,7 +11,6 @@ if(!isset($_SESSION['N_identificacion'])){
    <head> <!-- Aca yo programe el boton gris -->
        <meta charset="utf-8">
        <link rel="icon" href="images/icono6.ico">
-       <title>Inicio</title>
        <link rel="stylesheet" type="text/css" href="css/estiloPrincipal.css"> 
        <link rel="shortcut icon" href="images/escudobarra.png">
        <link rel="preconnect" href="https://fonts.gstatic.com">
