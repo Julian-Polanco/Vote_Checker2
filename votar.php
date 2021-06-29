@@ -59,7 +59,7 @@ foreach($datos as $fila){
 <div class="container mt-4">
   <div class="row">
     <div class="col text-center">
-      <button class="btn btn-primary">Siguiente</button>
+      <a href="votar2.php" class="btn btn-primary">Siguiente</a>
     </div>
   </div>
 </div>
