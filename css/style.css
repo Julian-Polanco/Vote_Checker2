@@ -1,48 +1,55 @@
 /* desde aca va mi css */
-button#btn-abrir-popup2:hover{
-	background-color: rgba(0,0,0,.3);
+button#btn-abrir-popup2:hover {
+	background-color: rgba(0, 0, 0, .3);
 }
-button#btn-abrir-popup2{
+
+button#btn-abrir-popup2 {
 	padding: 0 20px;
-    text-align: center;
-    font-family: var(--bs-font-sans-serif);
-    font-size: 1rem;
-    border: white;
+	text-align: center;
+	font-family: var(--bs-font-sans-serif);
+	font-size: 1rem;
+	border: white;
 	height: 38px;
-    line-height: 37px;
+	line-height: 37px;
 	border: 1px solid white;
 	color: #fff;
-	background: #0d6efd;;
+	background: #0d6efd;
+	;
 	border-radius: 3px;
-  margin-left:620px;
+	margin-left: 620px;
 }
-footer.text-center.text-white{
+
+footer.text-center.text-white {
 	position: relative;
 }
-button#btn-abrir-popup.btn-abrir-popup:hover{
-	background-color: rgba(0,0,0,.3);
+
+button#btn-abrir-popup.btn-abrir-popup:hover {
+	background-color: rgba(0, 0, 0, .3);
 }
-button#btn-abrir-popup.btn-abrir-popup{
-	margin-left:20px;padding: 0 20px;
-    text-align: center;
-    font-family: var(--bs-font-sans-serif);
-    font-size: 1rem;
+
+button#btn-abrir-popup.btn-abrir-popup {
+	margin-left: 20px;
+	padding: 0 20px;
+	text-align: center;
+	font-family: var(--bs-font-sans-serif);
+	font-size: 1rem;
 	height: 38px;
-    line-height: 37px;
+	line-height: 37px;
 	border: 1px solid white;
 	color: #fff;
 	background: #0d6efd;
 	border-radius: 3px;
-    
+
 }
+
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing:border-box;
+	box-sizing: border-box;
 }
 
 body {
-	background:  #ecf0f1;
+	background: #ecf0f1;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -67,7 +74,7 @@ body {
 }
 
 .contenedor article .btn-abrir-popup:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
@@ -75,7 +82,7 @@ body {
 /* ------------------------- */
 
 .overlay {
-	background: rgba(0,0,0,.3);
+	background: rgba(0, 0, 0, .3);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -93,7 +100,7 @@ body {
 
 .popup {
 	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
 	padding: 20px;
@@ -130,12 +137,15 @@ body {
 	margin-bottom: 40px;
 	opacity: 0;
 }
+
 .popup form .contenedor-inputs {
 	opacity: 0;
 }
+
 option {
-	text-align-last:center;
+	text-align-last: center;
 }
+
 .popup form .contenedor-inputs input {
 	width: 100%;
 	margin-bottom: 10px;
@@ -161,16 +171,28 @@ option {
 }
 
 .popup form .btn-submit:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
-.popup.active {	transform: scale(1); opacity: 1; }
-.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+.popup.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.popup.active h3 {
+	animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup.active h4 {
+	animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup.active .contenedor-inputs {
+	animation: entradaInputs 1s linear 1s forwards;
+}
 
 @keyframes entradaTitulo {
 	from {
@@ -197,75 +219,89 @@ option {
 }
 
 @keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
+
 .curso {
 	width: 50%;
 	margin-bottom: 5px;
 	height: 52px;
 	font-size: 18px;
-	line-height:52px;
-	text-align-last:center;
-	color:  #797d7f  ;
+	line-height: 52px;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
 }
+
 .grado {
 	width: 49%;
 	margin-bottom: 5px;
 	height: 52px;
 	font-size: 18px;
-	line-height:52px;
-	text-align-last:center;
-	color: #797d7f ;
+	line-height: 52px;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
 }
+
 .tipodocu {
 	width: 100%;
 	margin-bottom: 10px;
 	height: 52px;
 	font-size: 18px;
 	line-height: 52px;
-	text-align-last:center;
-	color: #797d7f ;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
-} 
+}
 
-.rol{
+.rol {
 	width: 100%;
 	margin-bottom: 10px;
 	height: 52px;
 	font-size: 18px;
 	line-height: 52px;
-	text-align-last:center;
+	text-align-last: center;
 	border: 1px solid #BBBBBB;
-	color: #797d7f ;
-} 
+	color: #797d7f;
+}
+
 /* aca estilos iniciar sesion */
 .contenedor-inputs2 {
 	width: 90%;
 	max-width: 1000px;
 	margin: 20px auto;
 }
+
 .contenedor-inputs2 article {
 	line-height: 28px;
 }
+
 .contenedor-inputs2 article h1 {
 	font-size: 30px;
 	text-align: left;
 	padding: 50px 0;
 }
+
 .contenedor-inputs2 article p {
 	margin-bottom: 20px;
 }
+
 .contenedor article .btn-abrir-popup:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
+
 /* ------------------------- */
 /* POPUP */
 /* ------------------------- */
 .overlay-inicio {
-	background: rgba(0,0,0,.3);
+	background: rgba(0, 0, 0, .3);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -276,19 +312,20 @@ option {
 	display: flex;
 	visibility: hidden;
 }
+
 .overlay-inicio.active {
 	visibility: visible;
 }
 
 .popup-inicio {
 	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
 	padding: 20px;
 	text-align: center;
 	width: 600px;
-	
+
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
@@ -333,7 +370,7 @@ option {
 
 option {
 
-	text-align-last:center;
+	text-align-last: center;
 }
 
 .popup-inicio form .contenedor-inputs2 input {
@@ -361,16 +398,28 @@ option {
 }
 
 .popup-inicio form .btn-submit2:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
-.popup-inicio.active {	transform: scale(1); opacity: 1; }
-.popup-inicio.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup-inicio.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup-inicio.active .contenedor-inputs2 { animation: entradaInputs 1s linear 1s forwards; }
+.popup-inicio.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.popup-inicio.active h3 {
+	animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup-inicio.active h4 {
+	animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup-inicio.active .contenedor-inputs2 {
+	animation: entradaInputs 1s linear 1s forwards;
+}
 
 @keyframes entradaTitulo {
 	from {
@@ -397,8 +446,13 @@ option {
 }
 
 @keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 .tipodocu {
@@ -407,10 +461,10 @@ option {
 	height: 52px;
 	font-size: 18px;
 	line-height: 52px;
-	text-align-last:center;
-	color: #797d7f ;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
-} 
+}
 
 
 
@@ -428,8 +482,8 @@ option {
 /* POPUP */
 /* ------------------------- */
 
-.overlay-alert_registro{
-	background: rgba(0,0,0,.3);
+.overlay-alert_registro {
+	background: rgba(0, 0, 0, .3);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -438,16 +492,17 @@ option {
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	
+
 }
-.overlay-alert_registro.disable{
-visibility: hidden;
+
+.overlay-alert_registro.disable {
+	visibility: hidden;
 }
 
 
 .popup-alert_registro {
 	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
 	padding: 20px;
@@ -462,7 +517,7 @@ visibility: hidden;
 
 }
 
-.popup-alert_registro .btn-cerrar-alert_registro{
+.popup-alert_registro .btn-cerrar-alert_registro {
 	font-size: 16px;
 	line-height: 16px;
 	display: block;
@@ -512,7 +567,7 @@ visibility: hidden;
 }
 
 .popup-alert_registro .btn-submit4:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 .popup-alert_registro .btn-submit3 {
@@ -530,16 +585,28 @@ visibility: hidden;
 }
 
 .popup-alert_registro .btn-submit3:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
-.popup-alert_registro {	transform: scale(1); opacity: 1; }
-.popup-alert_registro h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup-alert_registro h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup-alert_registro .contenedor-alert_registro { animation: entradaInputs 1s linear 1s forwards; }
+.popup-alert_registro {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.popup-alert_registro h3 {
+	animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup-alert_registro h4 {
+	animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup-alert_registro .contenedor-alert_registro {
+	animation: entradaInputs 1s linear 1s forwards;
+}
 
 @keyframes entradaTitulo {
 	from {
@@ -566,8 +633,13 @@ visibility: hidden;
 }
 
 @keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 
@@ -586,39 +658,41 @@ visibility: hidden;
 
 
 .image-fondo {
-  background-color: #ecf0f1;
-  background-position:center top;
-  margin: auto;
+	background-color: #ecf0f1;
+	background-position: center top;
+	margin: auto;
 }
 
-.fondo{
-color: #fff;
-height: auto;
-text-align: center;
-vertical-align: middle;
-text-shadow: #111 0px 0px 10px;
+.fondo {
+	color: #fff;
+	height: auto;
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: #111 0px 0px 10px;
 }
 
 .Titulo {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-size:300%;
-  color: #000;
-  text-shadow: none;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 300%;
+	color: #000;
+	text-shadow: none;
 }
 
-div.c-wrapper{
-  width: 80%; /* for example */
-  margin: auto;
+div.c-wrapper {
+	width: 80%;
+	/* for example */
+	margin: auto;
 }
 
-.carousel-inner > .item > img, 
-.carousel-inner > .item > a > img{
-width: 100%; /* use this, or not */
-margin: auto;
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+	width: 100%;
+	/* use this, or not */
+	margin: auto;
 }
 
 .carousel-item {
-  transition-duration: 500ms;
-  transition: transform 2s ease, opacity .5s ease-out
+	transition-duration: 500ms;
+	transition: transform 2s ease, opacity .5s ease-out
 }

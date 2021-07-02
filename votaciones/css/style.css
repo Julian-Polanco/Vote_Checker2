@@ -4,11 +4,11 @@
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing:border-box;
+	box-sizing: border-box;
 }
 
 body {
-	background:  #ecf0f1;
+	background: #ecf0f1;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -51,7 +51,7 @@ body {
 } */
 
 .contenedor article .btn-abrir-popup:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
@@ -59,7 +59,7 @@ body {
 /* ------------------------- */
 
 .overlay {
-	background: rgba(0,0,0,.3);
+	background: rgba(0, 0, 0, .3);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -77,13 +77,13 @@ body {
 
 .popup {
 	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
 	padding: 20px;
 	text-align: center;
 	width: 600px;
-	
+
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
@@ -128,7 +128,7 @@ body {
 
 option {
 
-	text-align-last:center;
+	text-align-last: center;
 }
 
 .popup form .contenedor-inputs input {
@@ -156,16 +156,28 @@ option {
 }
 
 .popup form .btn-submit:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
-.popup.active {	transform: scale(1); opacity: 1; }
-.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+.popup.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.popup.active h3 {
+	animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup.active h4 {
+	animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup.active .contenedor-inputs {
+	animation: entradaInputs 1s linear 1s forwards;
+}
 
 @keyframes entradaTitulo {
 	from {
@@ -192,55 +204,62 @@ option {
 }
 
 @keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 
 .curso {
-	visibility:visible;
+	visibility: visible;
 	width: 50%;
 	margin-bottom: 5px;
 	height: 52px;
 	font-size: 18px;
-	line-height:52px;
-	text-align-last:center;
-	color:  #797d7f  ;
+	line-height: 52px;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
 }
+
 .grado {
-	visibility:visible;
+	visibility: visible;
 	width: 49%;
 	margin-bottom: 5px;
 	height: 52px;
 	font-size: 18px;
-	line-height:52px;
-	text-align-last:center;
-	color: #797d7f ;
+	line-height: 52px;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
 	;
 }
+
 .tipodocu {
 	width: 100%;
 	margin-bottom: 10px;
 	height: 52px;
 	font-size: 18px;
 	line-height: 52px;
-	text-align-last:center;
-	color: #797d7f ;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
-} 
+}
 
-.rol{
+.rol {
 	width: 100%;
 	margin-bottom: 10px;
 	height: 52px;
 	font-size: 18px;
 	line-height: 52px;
-	text-align-last:center;
+	text-align-last: center;
 	border: 1px solid #BBBBBB;
-	color: #797d7f ;
-} 
+	color: #797d7f;
+}
 
 
 
@@ -285,7 +304,7 @@ option {
 } */
 
 .contenedor article .btn-abrir-popup:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
@@ -293,7 +312,7 @@ option {
 /* ------------------------- */
 
 .overlay-inicio {
-	background: rgba(0,0,0,.3);
+	background: rgba(0, 0, 0, .3);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -311,13 +330,13 @@ option {
 
 .popup-inicio {
 	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
 	padding: 20px;
 	text-align: center;
 	width: 600px;
-	
+
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
@@ -362,7 +381,7 @@ option {
 
 option {
 
-	text-align-last:center;
+	text-align-last: center;
 }
 
 .popup-inicio form .contenedor-inputs2 input {
@@ -390,16 +409,28 @@ option {
 }
 
 .popup-inicio form .btn-submit2:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(94, 125, 227, .9);
 }
 
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
-.popup-inicio.active {	transform: scale(1); opacity: 1; }
-.popup-inicio.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup-inicio.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup-inicio.active .contenedor-inputs2 { animation: entradaInputs 1s linear 1s forwards; }
+.popup-inicio.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.popup-inicio.active h3 {
+	animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup-inicio.active h4 {
+	animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup-inicio.active .contenedor-inputs2 {
+	animation: entradaInputs 1s linear 1s forwards;
+}
 
 @keyframes entradaTitulo {
 	from {
@@ -426,8 +457,13 @@ option {
 }
 
 @keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 .tipodocu {
@@ -436,10 +472,10 @@ option {
 	height: 52px;
 	font-size: 18px;
 	line-height: 52px;
-	text-align-last:center;
-	color: #797d7f ;
+	text-align-last: center;
+	color: #797d7f;
 	border: 1px solid #BBBBBB;
-} 
+}
 
 
 
@@ -461,41 +497,41 @@ option {
 
 
 .image-fondo {
-  background-color: #ecf0f1;
-  background-position:center top;
+	background-color: #ecf0f1;
+	background-position: center top;
 }
 
-.fondo{
-color: #fff;
-height: 800px;
-line-height: 200px;
-text-align: center;
-vertical-align: middle;
-text-shadow: #111 0px 0px 10px;
+.fondo {
+	color: #fff;
+	height: 800px;
+	line-height: 200px;
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: #111 0px 0px 10px;
 }
 
 .Titulo {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-size: 201%;
-  color: #000;
-  text-shadow: none;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 201%;
+	color: #000;
+	text-shadow: none;
 }
 
-div.c-wrapper{
-  width: 80%; /* for example */
-  margin: auto;
+div.c-wrapper {
+	width: 80%;
+	/* for example */
+	margin: auto;
 }
 
-.carousel-inner > .item > img, 
-.carousel-inner > .item > a > img{
-width: 100%; /* use this, or not */
-margin: auto;
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+	width: 100%;
+	/* use this, or not */
+	margin: auto;
 }
 
 .carousel-item {
-  transition-duration: 500ms;
-  transition: transform 2s ease, opacity .5s ease-out
+	transition-duration: 500ms;
+	transition: transform 2s ease, opacity .5s ease-out
 }
-
-

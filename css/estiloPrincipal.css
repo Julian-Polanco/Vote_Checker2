@@ -1,20 +1,22 @@
 /* desde aca va mi css */
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing:border-box;
-}
-body {
-	background:  #ecf0f1;
-	font-family: 'Open Sans', sans-serif;
-}
-.image-fondo {
-  background-color: #ecf0f1;
-  background-position:center top;
-  margin: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.fondo{
+body {
+    background: #ecf0f1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.image-fondo {
+    background-color: #ecf0f1;
+    background-position: center top;
+    margin: auto;
+}
+
+.fondo {
     color: #fff;
     height: 800px;
     line-height: 200px;
@@ -22,31 +24,39 @@ body {
     vertical-align: middle;
     text-shadow: #111 0px 0px 10px;
 }
+
 .Titulo {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size:300%;
+    font-size: 300%;
     color: #000;
     text-shadow: none;
 }
-div.c-wrapper{
-    width: 80%; /* for example */
+
+div.c-wrapper {
+    width: 80%;
+    /* for example */
     margin: auto;
 }
-.carousel-inner > .item > img, 
-.carousel-inner > .item > a > img{
-    width: 100%; /* use this, or not */
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    width: 100%;
+    /* use this, or not */
     margin: auto;
 }
+
 .carousel-item {
     transition-duration: 500ms;
     transition: transform 2s ease, opacity .5s ease-out
 }
-div.image-fondo.fondo{
+
+div.image-fondo.fondo {
     padding-bottom: 200px;
     height: 1000px;
 }
-div.image-fondo.fondo button.btn.btn-primary{
+
+div.image-fondo.fondo button.btn.btn-primary {
     margin: 0px auto 100px;
     padding: 0 20px;
     text-align: center;
@@ -56,7 +66,7 @@ div.image-fondo.fondo button.btn.btn-primary{
     width: 200px;
     line-height: 37px;
     border: 1px solid white;
-    color:#fff;
+    color: #fff;
     background: #0d6efd;
-    border-radius:3px;  
+    border-radius: 3px;
 }

@@ -1,43 +1,53 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing:border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-.Titulo{
+
+.Titulo {
     margin-top: 30px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size:300%;
+    font-size: 300%;
     color: #000;
     text-shadow: none;
 }
-.subTitulo{
+
+.subTitulo {
     margin-top: 30px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
 }
-img{
+
+img {
     margin-top: 15px;
     width: 150px;
     height: 150px;
 }
-.SeccionDeCandidatos{
+
+.SeccionDeCandidatos {
     margin-top: 30px;
     width: 1300px;
     margin: auto;
 }
-.border-primary.card:hover{
-    background-color:rgba(0, 0, 0, 0.2);
-    box-shadow: 5px 5px 5px rgba(44,130,201,0.5);
+
+.border-primary.card:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px rgba(44, 130, 201, 0.5);
 }
 
 
-.border-primary.card.active{
-    background-color:rgba(0, 0, 0, 0.4);
-    box-shadow: 5px 5px 5px rgba(44,130,201,0.5);
+.border-primary.card.active {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 5px rgba(44, 130, 201, 0.5);
 }
-input[type=radio]{
+
+input[type=radio] {
+    display: none;
+}
+
+#selecciona {
     display: none;
 }

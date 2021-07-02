@@ -20,4 +20,3 @@ foreach($dato as $fila){
     $usu = $fila['N_identificacion'];
     echo $usu;
 }
-?>

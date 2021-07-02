@@ -18,4 +18,3 @@ $insertadatos->bindParam(1, $idcandidato);
     $insertadatos->execute();
     }
 }
-?>

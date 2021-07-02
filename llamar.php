@@ -14,4 +14,3 @@ $jsonstring = json_encode($json);
     echo $jsonstring;
 }
 obtenercurso($_GET["Id_Grado"]);
-?>

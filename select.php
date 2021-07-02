@@ -30,4 +30,3 @@ function obtenercurso($Id_Grado){
         echo $jsonstring;
 }
 obtenergrado();
-?>
