@@ -32,3 +32,12 @@ img{
     background-color:rgba(0, 0, 0, 0.2);
     box-shadow: 5px 5px 5px rgba(44,130,201,0.5);
 }
+
+
+.border-primary.card.active{
+    background-color:rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 5px rgba(44,130,201,0.5);
+}
+input[type=radio]{
+    display: none;
+}

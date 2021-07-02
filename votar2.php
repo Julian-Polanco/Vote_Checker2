@@ -27,12 +27,12 @@ if(!isset($_SESSION['N_identificacion'])){
 </head>
 <body>
     <h1 class="Titulo">Voto a contraloria</h1>
-    <h2 class="subTitulo">Elige tu candidato y presiona en siguiente</h2>
+    <h2 class="subTitulo">Elige tu candidato y presiona en finalizar</h2>
 <div class="container-fluid mt-4" style="width: 95%;">   
 <div class="row row-cols-1 row-cols-md-4 g-4">
  <?php
     include_once 'Conexion.php';
-$stmt = $conn -> prepare("SELECT * FROM usuario WHERE Id_rol='R3'");
+$stmt = $conn -> prepare("SELECT * FROM usuario WHERE Id_curso IN ('1001','1002','1003','1004') AND Id_rol='R3'");
 $stmt->execute();
 $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($datos as $fila){
@@ -56,10 +56,10 @@ foreach($datos as $fila){
 ?>  
 </div>
 <p></p>
-<div class="container mt-4">
+<div id="C2" class="container mt-4">
   <div class="row">
     <div class="col text-center">
-      <a href="votar2.php" class="btn btn-primary">Siguiente</a>
+      <a href="votar2.php" class="btn btn-primary">Finalizar</a>
     </div>
   </div>
 </div>
