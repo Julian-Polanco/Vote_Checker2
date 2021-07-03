@@ -1,8 +1,12 @@
 <?php
-//seguridad de sesion
 session_start();
-$varsession = $_SESSION['N_identificacion'];
+error_reporting(0);
 if (!isset($_SESSION['N_identificacion'])) {
+  $varsession = $_SESSION['N_identificacion3'];
+}else{
+  $varsession = $_SESSION['N_identificacion'];
+}
+if (!isset($varsession)) {
   header("Location:pruebas.php");
 }
 include_once "conexion.php";

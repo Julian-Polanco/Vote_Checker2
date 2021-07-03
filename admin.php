@@ -1,8 +1,18 @@
+<?php
+//seguridad de sesion
+session_start();
+$varsession = $_SESSION['N_identificacion2'];
+if (!isset($_SESSION['N_identificacion2'])) {
+  header("Location:pruebas.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <link rel="stylesheet" type="text/css" href="css/admin.css">
+  <link rel="icon" href="images/icono6.ico">
   <link rel="stylesheet" href="css/fonts/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
@@ -12,7 +22,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricipal</title>
+  <title>Administrador</title>
 </head>
 
 <body>
@@ -27,7 +37,7 @@
   </nav>
 
   <h1 class=menu><label for="btn-menu" class=icon-menu></label> Menu</h1> <br>
-  <h1 class=admin><span class=icon-user-tie></span> Administrador </h1>
+  <h1 class=admin><span class=icon-user-tie></span> <?php echo $_SESSION['Nombre_Usuario2']; ?></h1>
 
   <h1 class="Tituloo"><br>BIENVENIDO A LAS ELECCIONES A PERSONERO Y CONTRALOR ESTUDIANTIL 2021<p>
   </h1>
@@ -92,7 +102,7 @@
         <li><a href="habilitar.php"><span class=icon-switch></span> Habiliar elecciones</a></li>
         <li><a href="#"><span class=icon-eye></span> Ver proceso de elecciones</a></li>
         <li><a href="#"><span class=icon-calculator></span> Resultados</a></li>
-        <li><a href="#"><span class=icon-exit></span> Cerrar sesion</a></li>
+        <li><a href="cerrarsession.php"><span class=icon-exit></span> Cerrar sesion</a></li>
       </nav>
       <label for="btn-menu" class=icon-cancel-circle></label>
     </div>

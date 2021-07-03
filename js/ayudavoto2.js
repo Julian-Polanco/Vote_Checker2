@@ -16,6 +16,8 @@ $(document).ready(function () {
                 console.log(response);
                 if (response == 11) {
                 window.location.assign("Principal.php");
+                }else if(response == '11ok'){
+                window.location.assign("candidato.php");
 
                 }
             }

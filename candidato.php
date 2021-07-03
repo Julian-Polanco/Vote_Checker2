@@ -1,8 +1,8 @@
 <?php
 //seguridad de sesion
 session_start();
-$varsession = $_SESSION['N_identificacion'];
-if (!isset($_SESSION['N_identificacion'])) {
+$varsession = $_SESSION['N_identificacion3'];
+if (!isset($_SESSION['N_identificacion3'])) {
   header("Location:pruebas.php");
 }
 include_once "conexion.php";
@@ -50,7 +50,7 @@ $datosProceso->execute();
           <!-- DropDown -->
           <li style=margin-left:20px; class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Conocer Cargos
+              Conoce tus cargos
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="votaciones/cargo personeria.php">Conocer cargo a personería</a></li>
@@ -61,7 +61,7 @@ $datosProceso->execute();
           <!-- DropDown #2 Empieza -->
           <li style=margin-left:20px; class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Conocer Propuestas
+              Conocer las propuestas
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="propuestas_c.php">Conocer propuetas a personería</a></li>
@@ -73,7 +73,7 @@ $datosProceso->execute();
     </div>
     <li style="margin-left:20px; list-style:none" ; class="nav-item dropdown">
       <a class="text-white nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <?php echo $_SESSION['Nombre_Usuario']; ?>
+        <?php echo $_SESSION['Nombre_Usuario3']; ?>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
         <li><a class="dropdown-item" href="cerrarsession.php">Cerrar Sesion</a></li>

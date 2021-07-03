@@ -1,9 +1,14 @@
 <?php
 session_start();
-$varsession = $_SESSION['N_identificacion'];
+error_reporting(0);
 if (!isset($_SESSION['N_identificacion'])) {
+    $varsession = $_SESSION['N_identificacion3'];
+  }else{
+    $varsession = $_SESSION['N_identificacion'];
+  }
+  if (!isset($varsession)) {
     header("Location:pruebas.php");
-};
+  }
 $candidato = $_POST['idCandidato'];
 $tarjeton = "C2";
 include_once "Conexion.php";
@@ -43,12 +48,25 @@ if ($datosProceso->rowCount() > 0) {
 };
 $ValidaVotoPersonero = $conn->prepare("INSERT INTO proceso_eleccion (Id_pe, N_identificacion, N_tarjeton, Id_candidato) VALUES (?, ?, ?, ?)");
 $ValidaVotoPersonero->bindParam(1, $idProcesoEleccion);
-$ValidaVotoPersonero->bindParam(2, $varsession);
-$ValidaVotoPersonero->bindParam(3, $nuevoid);
-$ValidaVotoPersonero->bindParam(4, $candidato);
-$ValidaVotoPersonero->execute();
-if ($ValidaVotoPersonero->rowCount() > 0) {
-    echo $ValidaVotoPersonero->rowCount();
-} else {
-    echo "algo falta";
-};
+if ($varsession==$_SESSION['N_identificacion3']) {
+    $ValidaVotoPersonero->bindParam(2, $varsession);
+    $ValidaVotoPersonero->bindParam(3, $nuevoid);
+    $ValidaVotoPersonero->bindParam(4, $candidato);
+    $ValidaVotoPersonero->execute();
+    if ($ValidaVotoPersonero->rowCount() > 0) {
+        echo $ValidaVotoPersonero->rowCount();
+        echo "ok";
+    } else {
+        echo "algo falta";
+    };
+}else{
+    $ValidaVotoPersonero->bindParam(2, $varsession);
+    $ValidaVotoPersonero->bindParam(3, $nuevoid);
+    $ValidaVotoPersonero->bindParam(4, $candidato);
+    $ValidaVotoPersonero->execute();
+    if ($ValidaVotoPersonero->rowCount() > 0) {
+        echo $ValidaVotoPersonero->rowCount();
+    } else {
+        echo "algo falta";
+    };
+}

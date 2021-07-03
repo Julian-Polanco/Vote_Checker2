@@ -8,9 +8,13 @@ $(document).ready(function () {
             data: datosformulario,
             success: function (respuesta) {
                 console.log(respuesta);
-                if (respuesta == 1) {
+                if (respuesta == 'R1') {
+                    location.href = "admin.php";
+                } else if(respuesta =='R2') {
                     location.href = "Principal.php";
-                } else {
+                }else if(respuesta =='R3'){
+                location.href = "candidato.php";
+                }else{
                     function traeralert() {
                         $.ajax({
                                 url: 'alert_error.html',
