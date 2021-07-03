@@ -7,7 +7,6 @@ error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <!-- Aca yo programe el boton gris -->
   <meta charset="utf-8">
@@ -25,7 +24,6 @@ error_reporting(0);
   <script src="https://kit.fontawesome.com/3c32b9d0c9.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <!-- Barra navegaciòn -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="line-height: 3.9; font-size: 1.3rem;">
@@ -153,7 +151,6 @@ error_reporting(0);
     </div>
   </div>
   <!-- aca va formulario registro en pop up -->
-
   <div class="overlay" id="overlay">
     <!-- division que contiene al pop up de registrarse -->
     <div class="popup" id="popup">
@@ -188,7 +185,6 @@ error_reporting(0);
     </div>
   </div>
   <div id="alert_error" class="contenedor-inicio"></div>
-
   <?php
   include_once 'Conexion.php';
   if ($_POST['Enviaregistro'] == 'Registrarme') {
@@ -258,11 +254,9 @@ error_reporting(0);
       wrap: false
     })
   </script>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/select.js"></script>
   <script src="js/popup.js"></script>
   <script src="js/validacionconajax.js"></script>
 </body>
-
 </html>

@@ -1,12 +1,12 @@
 <?php
-function obtenergrado(){
+function obtenergrado()
+{
     include_once 'Conexion.php';
-    $stmt =$conn->prepare("SELECT * FROM grado");
+    $stmt = $conn->prepare("SELECT * FROM grado");
     $stmt->execute();
     $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $json = array();
-        
-    foreach($datos as $row) {
+    foreach ($datos as $row) {
         $json[] = array(
             'Id_Grado' => $row['Id_Grado'],
             'Nombre_Grado' => $row['Nombre_Grado'],
@@ -15,18 +15,19 @@ function obtenergrado(){
     $jsonstring = json_encode($json);
     echo $jsonstring;
 }
-function obtenercurso($Id_Grado){
+function obtenercurso($Id_Grado)
+{
     include_once 'Conexion.php';
     $stmt = $conn->prepare("SELECT * FROM curso WHERE Id_Grado = $Id_Grado");
     $stmt->execute();
     $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $json = array();
-    foreach($datos as $row){
+    foreach ($datos as $row) {
         $json[] = array(
             'Id_curso' => $row['Id_curso'],
         );
     }
     $jsonstring = json_encode($json);
-        echo $jsonstring;
+    echo $jsonstring;
 }
 obtenergrado();

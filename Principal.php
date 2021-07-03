@@ -9,13 +9,10 @@ include_once "conexion.php";
 $datosProceso = $conn->prepare("SELECT * FROM proceso_eleccion WHERE N_identificacion =:N_identificacion");
 $datosProceso->bindParam(":N_identificacion", $varsession);
 $datosProceso->execute();
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  
   <!-- Aca yo programe el boton gris -->
   <meta charset="utf-8">
   <link rel="icon" href="images/icono6.ico">
@@ -34,7 +31,6 @@ $datosProceso->execute();
   <script src="https://kit.fontawesome.com/3c32b9d0c9.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <!-- Barra navegaciòn -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="line-height: 3.9; font-size: 1.3rem;">
@@ -84,7 +80,6 @@ $datosProceso->execute();
         <li><a class="dropdown-item" href="cerrarsession.php">Cerrar Sesion</a></li>
       </ul>
     </li>
-
   </nav>
   <!-- Barra de Navegacion Fin -->
   <!-- Fondo de Pagina -->
@@ -171,26 +166,25 @@ $datosProceso->execute();
     <!-- Copyright -->
   </footer>
   <?php
-  if ($datosProceso->rowCount()>=2) {
+  if ($datosProceso->rowCount() >= 2) {
   ?>
-  <!-- desde aca va el alert modificado -->
-  <div class="contenedor-voto">
-        <div class="overlay-alert_voto" id="overlay-alert_voto">
-          <!-- division que contiene al pop up de registrarse -->
-          <div class="popup-alert_voto" id="popup-alert_voto">
-            <a id="btn-cerrar-alert_voto" class="btn-cerrar-alert_voto"><i class="fas fa-times"></i></a>
-            <h3>Tu voto ya ha sido validado</h3>
-            <h4>Gracias por votar</h4>
-            <div class="contenedor-alert_voto">
-            </div>
-            <input id="btn-submit_voto" type="submit" class="btn-submit3" value="Ok">
+    <!-- desde aca va el alert modificado -->
+    <div class="contenedor-voto">
+      <div class="overlay-alert_voto" id="overlay-alert_voto">
+        <!-- division que contiene al pop up de registrarse -->
+        <div class="popup-alert_voto" id="popup-alert_voto">
+          <a id="btn-cerrar-alert_voto" class="btn-cerrar-alert_voto"><i class="fas fa-times"></i></a>
+          <h3>Tu voto ya ha sido validado</h3>
+          <h4>Gracias por votar</h4>
+          <div class="contenedor-alert_voto">
           </div>
+          <input id="btn-submit_voto" type="submit" class="btn-submit3" value="Ok">
         </div>
       </div>
+    </div>
   <?php
-  
-}
-?>
+  }
+  ?>
   <script>
     var myCarousel = document.querySelector('#myCarousel')
     var carousel = new bootstrap.Carousel(myCarousel, {
@@ -206,28 +200,27 @@ $datosProceso->execute();
     });
   </script>
   <script>
-if (<?php echo $datosProceso->rowCount(); ?> >= 2) {
-  var votar = document.getElementById("avotar");
-  votar.classList.add('d-none');
-  var fondo =document.getElementById("fondo");
-  fondo.classList.remove(".image-fondo.fondo");
-  fondo.classList.add('principal');
-}
-</script>
-<script>
-  var cerrar = document.getElementById('btn-cerrar-alert_voto'),
+    if (<?php echo $datosProceso->rowCount(); ?> >= 2) {
+      var votar = document.getElementById("avotar");
+      votar.classList.add('d-none');
+      var fondo = document.getElementById("fondo");
+      fondo.classList.remove(".image-fondo.fondo");
+      fondo.classList.add('principal');
+    }
+  </script>
+  <script>
+    var cerrar = document.getElementById('btn-cerrar-alert_voto'),
       overlayvoto = document.getElementById('overlay-alert_voto'),
       ok = document.getElementById('btn-submit_voto'),
       popupvoto = document.getElementById('popup-alert_voto');
-      cerrar.addEventListener('click',function(){
-        overlayvoto.classList.add('disable');
-        popupvoto.classList.add('disable')
-      });
-      ok.addEventListener('click',function(){
-        overlayvoto.classList.add('disable');
-        popupvoto.classList.add('disable');
-      });
-</script>
+    cerrar.addEventListener('click', function() {
+      overlayvoto.classList.add('disable');
+      popupvoto.classList.add('disable')
+    });
+    ok.addEventListener('click', function() {
+      overlayvoto.classList.add('disable');
+      popupvoto.classList.add('disable');
+    });
+  </script>
 </body>
-
 </html>

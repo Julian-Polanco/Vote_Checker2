@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <link rel="stylesheet" type="text/css" href="css/admin.css">
   <link rel="stylesheet" href="css/fonts/style.css">
@@ -14,7 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>habilitar elecciones</title>
 </head>
-
 <body>
   <!-- barra azul -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="line-height: 3.9; font-size: 1.3rem;">
@@ -89,5 +87,4 @@
       </footer>
     </div>
 </body>
-
 </html>
