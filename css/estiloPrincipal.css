@@ -38,6 +38,13 @@ div.c-wrapper {
     /* for example */
     margin: auto;
 }
+#carouselExampleControls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+    margin-bottom: 10000px;
+}
 
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {

@@ -5,11 +5,16 @@ $varsession = $_SESSION['N_identificacion'];
 if (!isset($_SESSION['N_identificacion'])) {
   header("Location:pruebas.php");
 }
+include_once "conexion.php";
+$datosProceso = $conn->prepare("SELECT * FROM proceso_eleccion WHERE N_identificacion =:N_identificacion");
+$datosProceso->bindParam(":N_identificacion", $varsession);
+$datosProceso->execute();
 ?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+  
   <!-- Aca yo programe el boton gris -->
   <meta charset="utf-8">
   <link rel="icon" href="images/icono6.ico">
@@ -137,7 +142,7 @@ if (!isset($_SESSION['N_identificacion'])) {
       </button>
     </div>
   </div>
-  <footer class="text-center text-white" style="background-color: #0a4275;">
+  <footer class="text-center text-white mt-5" style="background-color: #0a4275;">
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
       <section class="mb-4">
@@ -177,6 +182,12 @@ if (!isset($_SESSION['N_identificacion'])) {
       window.location.href = "votar.php";
     });
   </script>
+  <script>
+if (<?php echo $datosProceso->rowCount(); ?> >= 2) {
+  var votar = document.getElementById("avotar");
+  votar.classList.add('d-none');
+}
+</script>
 </body>
 
 </html>

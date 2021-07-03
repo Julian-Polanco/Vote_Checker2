@@ -9,7 +9,7 @@ $(document).ready(function () {
         const elemento = candidatos[i];
         var elementi = ($(element).is(':checked'));
         if (elementi === true) {
-          $(botonsig).removeClass('disabled')
+          $(botonsig).removeClass('disabled');
           $(elemento).addClass('active');
         } else {
           $(elemento).removeClass('active');

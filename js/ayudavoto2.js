@@ -1,21 +1,21 @@
 $(document).ready(function () {
-    var botonsig = document.getElementById("siguiente");
+    var botonsig = document.getElementById("finalizar");
     $(".border-primary.card").click(function () {
         var idCandidato = $(this).attr("id");
-        let aver = document.getElementById("selecciona").innerHTML = idCandidato;
+        let aver = document.getElementById("seleccionar").innerHTML = idCandidato;
     });
     $(botonsig).click(function () {
-        let aver = document.getElementById("selecciona").textContent;
+        let aveir = document.getElementById("seleccionar").textContent;
         $($.ajax({
             type: "POST",
-            url: "datosVotos.php",
+            url: "datosVotos2.php",
             data: {
-                "idCandidato": aver
+                "idCandidato": aveir
             },
             success: function (response) {
                 console.log(response);
                 if (response == 11) {
-                window.location.assign("votar2.php");
+                window.location.assign("Principal.php");
 
                 }
             }
