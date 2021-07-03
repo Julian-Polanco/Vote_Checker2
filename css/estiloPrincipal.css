@@ -18,7 +18,6 @@ body {
 
 .fondo {
     color: #fff;
-    height: 800px;
     line-height: 200px;
     text-align: center;
     vertical-align: middle;
@@ -43,7 +42,6 @@ div.c-wrapper {
     justify-content: center;
     align-items: center;
     margin-top:100px;
-    margin-bottom: 10000px;
 }
 
 .carousel-inner>.item>img,
@@ -60,11 +58,13 @@ div.c-wrapper {
 
 div.image-fondo.fondo {
     padding-bottom: 200px;
-    height: 1000px;
+    height: 1100px;
+}
+.principal{
+    max-height: 850px;
 }
 
 div.image-fondo.fondo button.btn.btn-primary {
-    margin: 0px auto 100px;
     padding: 0 20px;
     text-align: center;
     font-family: var(--bs-font-sans-serif);

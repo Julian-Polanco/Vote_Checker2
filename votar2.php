@@ -5,6 +5,13 @@ $varsession = $_SESSION['N_identificacion'];
 if (!isset($_SESSION['N_identificacion'])) {
   header("Location:pruebas.php");
 }
+include_once "conexion.php";
+$datosProceso = $conn->prepare("SELECT * FROM proceso_eleccion WHERE N_identificacion =:N_identificacion ");
+$datosProceso->bindParam(":N_identificacion", $varsession);
+$datosProceso->execute();
+if ($datosProceso->rowCount()>=2) {
+  header("Location:Principal.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -34,7 +41,7 @@ if (!isset($_SESSION['N_identificacion'])) {
     <div class="row row-cols-1 row-cols-md-4 g-4">
       <?php
       include_once 'Conexion.php';
-      $stmt = $conn->prepare("SELECT * FROM usuario WHERE Id_curso IN ('1001','1002','1003','1004') AND Id_rol='R3'");
+      $stmt = $conn->prepare("SELECT * FROM usuario WHERE Id_curso IN ('1001','1002','1003','1004') AND Id_rol='R3' ORDER BY Id_curso ASC");
       $stmt->execute();
       $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $contador = 0;

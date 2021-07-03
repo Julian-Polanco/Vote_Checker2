@@ -9,6 +9,7 @@ include_once "conexion.php";
 $datosProceso = $conn->prepare("SELECT * FROM proceso_eleccion WHERE N_identificacion =:N_identificacion");
 $datosProceso->bindParam(":N_identificacion", $varsession);
 $datosProceso->execute();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -19,6 +20,7 @@ $datosProceso->execute();
   <meta charset="utf-8">
   <link rel="icon" href="images/icono6.ico">
   <title>Inicio</title>
+  <link rel="stylesheet" type="text/css" href="css/estilovalidavoto.css">
   <link rel="stylesheet" type="text/css" href="css/estiloPrincipal.css">
   <link rel="shortcut icon" href="images/escudobarra.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -86,14 +88,14 @@ $datosProceso->execute();
   </nav>
   <!-- Barra de Navegacion Fin -->
   <!-- Fondo de Pagina -->
-  <div class="image-fondo fondo">
+  <div id="fondo" class="image-fondo fondo">
     <!-- Fonde de Pagina Fin -->
     <!-- Cuerpo de Pàgina -->
     <h1 class="Titulo"><br>BIENVENIDO A LAS ELECCIONES A PERSONERO Y CONTRALOR ESTUDIANTIL 2021<p>
     </h1>
     <button id="avotar" class="btn btn-primary"><i class="fas fa-user-edit"></i>Ir a Votar</button>
     <!-- Carrusel 2 -->
-    <div id="carouselExampleControls" class="carousel slide translateY(2%)" data-bs-ride="carousel" style="margin-bottom:1000px; transform: translate(0%, -10%);">
+    <div id="carouselExampleControls" class="carousel slide translateY(2%)" data-bs-ride="carousel" style="transform: translate(0%, -10%);">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="images/imagen1.jpg" class="d-block w-500 d-block mx-auto" alt="500" width="1130" height="550">
@@ -142,7 +144,7 @@ $datosProceso->execute();
       </button>
     </div>
   </div>
-  <footer class="text-center text-white mt-5" style="background-color: #0a4275;">
+  <footer class="text-center text-white" style="background-color: #0a4275;">
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
       <section class="mb-4">
@@ -168,6 +170,27 @@ $datosProceso->execute();
     </div>
     <!-- Copyright -->
   </footer>
+  <?php
+  if ($datosProceso->rowCount()>=2) {
+  ?>
+  <!-- desde aca va el alert modificado -->
+  <div class="contenedor-voto">
+        <div class="overlay-alert_voto" id="overlay-alert_voto">
+          <!-- division que contiene al pop up de registrarse -->
+          <div class="popup-alert_voto" id="popup-alert_voto">
+            <a id="btn-cerrar-alert_voto" class="btn-cerrar-alert_voto"><i class="fas fa-times"></i></a>
+            <h3>Tu voto ya ha sido validado</h3>
+            <h4>Gracias por votar</h4>
+            <div class="contenedor-alert_voto">
+            </div>
+            <input id="btn-submit_voto" type="submit" class="btn-submit3" value="Ok">
+          </div>
+        </div>
+      </div>
+  <?php
+  
+}
+?>
   <script>
     var myCarousel = document.querySelector('#myCarousel')
     var carousel = new bootstrap.Carousel(myCarousel, {
@@ -186,7 +209,24 @@ $datosProceso->execute();
 if (<?php echo $datosProceso->rowCount(); ?> >= 2) {
   var votar = document.getElementById("avotar");
   votar.classList.add('d-none');
+  var fondo =document.getElementById("fondo");
+  fondo.classList.remove(".image-fondo.fondo");
+  fondo.classList.add('principal');
 }
+</script>
+<script>
+  var cerrar = document.getElementById('btn-cerrar-alert_voto'),
+      overlayvoto = document.getElementById('overlay-alert_voto'),
+      ok = document.getElementById('btn-submit_voto'),
+      popupvoto = document.getElementById('popup-alert_voto');
+      cerrar.addEventListener('click',function(){
+        overlayvoto.classList.add('disable');
+        popupvoto.classList.add('disable')
+      });
+      ok.addEventListener('click',function(){
+        overlayvoto.classList.add('disable');
+        popupvoto.classList.add('disable');
+      });
 </script>
 </body>
 
