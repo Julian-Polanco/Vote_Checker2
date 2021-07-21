@@ -1,3 +1,13 @@
+<?php
+//seguridad de sesion
+session_start();
+$varsession = $_SESSION['N_identificacion2'];
+if (!isset($_SESSION['N_identificacion2'])) {
+  header("Location:pruebas.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,7 +17,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>propuestas de contraloria</title>
+  <title>propuestas de personeria</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
@@ -26,8 +36,8 @@
     </div>
   </nav>
   <h1 class=menu><label for="btn-menu" class=icon-menu></label> Menu</h1> <br>
-  <h1 class=admin><span class=icon-user-tie></span> Administrador </h1>
-  <h1 class=intro2>propuestas de contraloria <br>
+  <h1 class=admin><span class=icon-user-tie></span> <?php echo $_SESSION['Nombre_Usuario2']; ?></h1>
+  <h1 class=intro2>Propuestas de personeria <br>
     <h1 class=intro3>NOTA: Tienes que iniciar sesion en facebook para poder comentar y solo a los canditatos se les permite </h1>
   </h1>
   <div id="fb-root"></div>
@@ -40,12 +50,12 @@
     <div class=cont-menu>
       <nav>
         <li><a href="admin.php"><span class=icon-home3></span> Inicio</a></li>
-        <li><a href="propuestas_p.php"><span class=icon-user></span> propuestas de pesoneria</a></li>
-        <li><a href="propuestas_c.php"><span class=icon-user></span> propuestas de contraloria</a></li>
+        <li><a href="propuestas_p.php"><span class=icon-user></span> Propuestas de pesoneria</a></li>
+        <li><a href="propuestas_c.php"><span class=icon-user></span> Propuestas de contraloria</a></li>
         <li><a href="habilitar.php"><span class=icon-switch></span> Habiliar elecciones</a></li>
-        <li><a href="#"><span class=icon-eye></span> Ver proceso de elecciones</a></li>
+        <li><a href="ver.php"><span class=icon-eye></span> Ver proceso de elecciones</a></li>
         <li><a href="#"><span class=icon-calculator></span> Resultados</a></li>
-        <li><a href="#"><span class=icon-exit></span> Cerrar sesion</a></li>
+        <li><a href="http://localhost/vote_checker-final/pruebas.php"><span class=icon-exit></span> Cerrar sesion</a></li>
       </nav>
       <label for="btn-menu" class=icon-cancel-circle></label>
     </div>

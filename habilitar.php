@@ -1,3 +1,11 @@
+<?php
+//seguridad de sesion
+session_start();
+$varsession = $_SESSION['N_identificacion2'];
+if (!isset($_SESSION['N_identificacion2'])) {
+  header("Location:pruebas.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,9 +30,10 @@
         I.E Julio Cesar Turbay Ayala
       </a>
     </div>
+    
   </nav>
   <h1 class=menu><label for="btn-menu" class=icon-menu></label> Menu</h1> <br>
-  <h1 class=admin><span class=icon-user-tie></span> Administrador </h1>
+  <h1 class=admin><span class=icon-user-tie></span> <?php echo $_SESSION['Nombre_Usuario2']; ?></h1>
   <div class=btn-menu>
   </div>
   <div>

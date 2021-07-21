@@ -53,8 +53,8 @@ $datosProceso->execute();
               Conoce tus cargos
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="votaciones/cargo personeria.php">Conocer cargo a personería</a></li>
-              <li><a class="dropdown-item" href="votaciones/cargocontraloria.php">Conocer cargo a contraloría</a></li>
+              <li><a class="dropdown-item" href="cargop_ersoneria.php">Conocer cargo a personería</a></li>
+              <li><a class="dropdown-item" href="cargo_contraloria.php">Conocer cargo a contraloría</a></li>
             </ul>
           </li>
           <!-- DropDown Termina -->
@@ -64,8 +64,8 @@ $datosProceso->execute();
               Conocer las propuestas
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="propuestas_c.php">Conocer propuetas a personería</a></li>
-              <li><a class="dropdown-item" href="propuestas_p.php">Conocer propuetas a contraloría</a></li>
+              <li><a class="dropdown-item" href="propuestas_pu.php">Conocer propuetas a personería</a></li>
+              <li><a class="dropdown-item" href="propuestas_cu.php">Conocer propuetas a contraloría</a></li>
             </ul>
           </li>
         </ul>

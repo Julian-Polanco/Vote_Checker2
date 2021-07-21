@@ -17,6 +17,7 @@ $datosProceso->execute();
   <meta charset="utf-8">
   <link rel="icon" href="images/icono6.ico">
   <title>Inicio</title>
+  <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" type="text/css" href="css/estilovalidavoto.css">
   <link rel="stylesheet" type="text/css" href="css/estiloPrincipal.css">
   <link rel="shortcut icon" href="images/escudobarra.png">
@@ -32,10 +33,24 @@ $datosProceso->execute();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
 <body>
+
+
+<div class="portada" id="portada">
+ 
+   <h1 class="logotipo">Comensaremos en</h1>
+ <br>
+
+ <div id="cuenta"></div>
+
+ 
+</div>
+
+
+
   <!-- Barra navegaciòn -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="line-height: 3.9; font-size: 1.3rem;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="principal.php">
         <img style=margin-left:20px; src="images/escudobarra.png" alt="" width="80" height="80" class="d-inline-block align-top">
         I.E Julio Cesar Turbay Ayala
       </a>
@@ -45,7 +60,7 @@ $datosProceso->execute();
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li style=margin-left:20px; class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="principal.php">Inicio</a>
           </li>
           <!-- DropDown -->
           <li style=margin-left:20px; class="nav-item dropdown">
@@ -53,8 +68,8 @@ $datosProceso->execute();
               Conocer Cargos
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="votaciones/cargo personeria.php">Conocer cargo a personería</a></li>
-              <li><a class="dropdown-item" href="votaciones/cargocontraloria.php">Conocer cargo a contraloría</a></li>
+            <li><a class="dropdown-item" href="cargop_ersoneria.php">Conocer cargo a personería</a></li>
+            <li><a class="dropdown-item" href="cargo_contraloria.php">Conocer cargo a contraloría</a></li>
             </ul>
           </li>
           <!-- DropDown Termina -->
@@ -64,8 +79,8 @@ $datosProceso->execute();
               Conocer Propuestas
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="propuestas_c.php">Conocer propuetas a personería</a></li>
-              <li><a class="dropdown-item" href="propuestas_p.php">Conocer propuetas a contraloría</a></li>
+              <li><a class="dropdown-item" href="propuestas_pu.php">Conocer propuetas a personería</a></li>
+              <li><a class="dropdown-item" href="propuestas_cu.php">Conocer propuetas a contraloría</a></li>
             </ul>
           </li>
         </ul>
@@ -221,5 +236,8 @@ $datosProceso->execute();
       popupvoto.classList.add('disable');
     });
   </script>
+
+<script src="js/simplyCountdown.min.js"></script>
+	<script src="js/countdown.js"></script>
 </body>
 </html>

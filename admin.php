@@ -97,10 +97,10 @@ if (!isset($_SESSION['N_identificacion2'])) {
     <div class=cont-menu>
       <nav>
         <li><a href="admin.php"><span class=icon-home3></span> Inicio</a></li>
-        <li><a href="propuestas_p.php"><span class=icon-user></span> propuestas de pesoneria</a></li>
-        <li><a href="propuestas_c.php"><span class=icon-user></span> propuestas de contraloria</a></li>
+        <li><a href="propuestas_p.php"><span class=icon-user></span> Propuestas de pesoneria</a></li>
+        <li><a href="propuestas_c.php"><span class=icon-user></span> Propuestas de contraloria</a></li>
         <li><a href="habilitar.php"><span class=icon-switch></span> Habiliar elecciones</a></li>
-        <li><a href="#"><span class=icon-eye></span> Ver proceso de elecciones</a></li>
+        <li><a href="ver.php"><span class=icon-eye></span> Ver proceso de elecciones</a></li>
         <li><a href="#"><span class=icon-calculator></span> Resultados</a></li>
         <li><a href="cerrarsession.php"><span class=icon-exit></span> Cerrar sesion</a></li>
       </nav>

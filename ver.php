@@ -1,55 +1,54 @@
-<?php
-//seguridad de sesion
-session_start();
-$varsession = $_SESSION['N_identificacion2'];
-if (!isset($_SESSION['N_identificacion2'])) {
-  header("Location:pruebas.php");
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <link rel="stylesheet" type="text/css" href="css/admin.css">
+	<head>
+		<title>proceso de eleccion</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<!-- ESTILOS -->
+        <link rel="stylesheet" type="text/css" href="css/admin.css">
   <link rel="stylesheet" href="css/fonts/style.css">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>propuestas de contraloria</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-</head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        </head>
+	<body>
+   
 
-<body>
-  <!-- Barra azul -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="line-height: 3.9; font-size: 1.3rem;">
+<!-- barra azul -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="line-height: 3.9; font-size: 1.3rem;">
     <div class="container-fluid">
       <a class="navbar-brand">
         <img style=margin-left:460px; src="images/escudobarra.png" alt="" width="80" height="80" class="d-inline-block align-top">
-        I.E Julio Cesar Turbay Ayala</a>
+        I.E Julio Cesar Turbay Ayala
+      </a>
     </div>
   </nav>
+
   <h1 class=menu><label for="btn-menu" class=icon-menu></label> Menu</h1> <br>
-  <h1 class=admin><span class=icon-user-tie></span> <?php echo $_SESSION['Nombre_Usuario2']; ?></h1>
-  <h1 class=intro2> Propuestas de contraloria <br>
-    <h1 class=intro3>NOTA: Tienes que iniciar sesion en facebook para poder comentar y solo a los canditatos se les permite </h1>
+  <h1 class=admin><span class=icon-user-tie></span> Administrador </h1>
+
+  <h1 class="Tituloo"><br>Consultar votos<p>
   </h1>
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0" nonce="fXUcz0nk"></script>
-  <div class="fb-comments" data-href="http://localhost/vote_checker-main/propuestas_c.php" data-width="100%" data-numposts="10"></div>
-  <div class=btn-menu>
+
+   
+    <div class=btn-menu>
   </div>
   <input type="checkbox" id="btn-menu">
   <div class=container-menu>
     <div class=cont-menu>
       <nav>
         <li><a href="admin.php"><span class=icon-home3></span> Inicio</a></li>
-        <li><a href="propuestas_p.php"><span class=icon-user></span> Propuestas de pesoneria</a></li>
-        <li><a href="propuestas_c.php"><span class=icon-user></span> Propuestas de contraloria</a></li>
+        <li><a href="propuestas_p.php"><span class=icon-user></span> propuestas de pesoneria</a></li>
+        <li><a href="propuestas_c.php"><span class=icon-user></span> propuestas de contraloria</a></li>
         <li><a href="habilitar.php"><span class=icon-switch></span> Habiliar elecciones</a></li>
         <li><a href="ver.php"><span class=icon-eye></span> Ver proceso de elecciones</a></li>
         <li><a href="#"><span class=icon-calculator></span> Resultados</a></li>
@@ -58,7 +57,24 @@ if (!isset($_SESSION['N_identificacion2'])) {
       <label for="btn-menu" class=icon-cancel-circle></label>
     </div>
   </div>
-  <footer class="text-center text-white" style="background-color: #0a4275;">
+
+ <div style=" margin-left:5%; width: 90%;">
+		<section>
+			
+        <input style="margin-left:37%; " type="text" name="busqueda" id="busqueda" placeholder="Buscar con ID estudiante">
+			
+        <input type="submit" name="boton" id="Buscar" value="Buscar Datos">
+            <br>
+            <br>
+            <br>
+		</section>
+		<section id="tabla_resultado">
+		<!-- -->
+		</section>
+
+        </div>
+        <div class="compi">
+        <footer class="text-center text-white" style="background-color: #0a4275;">
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
       <section class="mb-4">
@@ -84,6 +100,7 @@ if (!isset($_SESSION['N_identificacion2'])) {
     </div>
     <!-- Copyright -->
   </footer>
-</body>
-
+  </div>
+        <script src="js/peticion.js"></script>
+	</body>
 </html>
